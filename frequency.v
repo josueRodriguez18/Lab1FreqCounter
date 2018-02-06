@@ -19,6 +19,7 @@ wire[31:0] count;
 //bcd stuff
 
 
+counter(gate, signalIn, count);
 
 always(@posedge clock)
 begin
