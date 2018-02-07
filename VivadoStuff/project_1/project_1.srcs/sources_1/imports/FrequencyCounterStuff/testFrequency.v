@@ -2,7 +2,7 @@ module testFrequency();
     reg[0:32] sigin;
     reg clck;
     wire[0:7] segment;
-    wire[0:7] digit;
+    wire[7:0] digit;
 
     initial begin
         clck = 1; //initialize clock to 1 (this will be gate input)

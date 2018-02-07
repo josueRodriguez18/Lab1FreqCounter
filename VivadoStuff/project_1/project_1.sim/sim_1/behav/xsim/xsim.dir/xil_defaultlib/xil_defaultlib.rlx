@@ -1,0 +1,8 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.srcs/sources_1/imports/FrequencyCounterStuff/counter.v,1517975423,verilog,,D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.srcs/sources_1/imports/FrequencyCounterStuff/frequency.v,,counter,,,,,,,,
+D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.srcs/sources_1/imports/FrequencyCounterStuff/frequency.v,1517976182,verilog,,D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.srcs/sources_1/imports/FrequencyCounterStuff/testFrequency.v,,frequency,,,,,,,,
+D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.srcs/sources_1/imports/FrequencyCounterStuff/testFrequency.v,1517976030,verilog,,,,testFrequency,,,,,,,,

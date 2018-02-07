@@ -1,4 +1,4 @@
-module timer(reset,clock,count); //clock should be signalIn eventually
+module counter(reset,clock,count); //clock should be signalIn eventually
 
 parameter size = 32; //maximum amount of HIGH counts
 
