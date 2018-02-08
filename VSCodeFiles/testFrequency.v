@@ -2,7 +2,7 @@
 module testFrequency();
     reg sigin;
     reg clck;
-    wire[0:6] segment;
+    wire[0:6] seg;
     wire[0:7] number;
 
     initial begin
@@ -14,5 +14,5 @@ module testFrequency();
             #10 sigin = ~sigin; //invert signal to create square wave (has period of 50 ms)
             #1 clck = ~clck; //regulates update rate for ouput of segments and numbers
         end
-    frequency f1(sigin, clck, number, segment);
+    frequency f1(sigin, clck, number, seg);
 endmodule
