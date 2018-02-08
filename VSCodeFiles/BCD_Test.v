@@ -5,7 +5,7 @@ module BCD_Test();
     wire[6:0] seg;
     //this test bench is really simple, nothing is time dependent
     initial begin
-        BCD = $urandom % 16 //unsigned random number between 0-15
+        BCD = 4'b0101; //unsigned random number between 0-15
                             //not sure if this works
     end
 
