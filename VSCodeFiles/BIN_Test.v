@@ -16,4 +16,5 @@ module BIN_Test();
             2   = hundreds =  0010
             3   = tens =      0011
             4   = ones =      0100
+            */
 endmodule
