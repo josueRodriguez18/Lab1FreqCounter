@@ -1,6 +1,4 @@
-module timer(reset,clock,count); //clock should be signalIn eventually
-
-parameter size = 32; //maximum amount of HIGH counts
+module counter(reset,clock,count); //clock should be signalIn eventually
 
 input reset, clock; //clock to timekeep, reset to reset clock
 
