@@ -3,7 +3,7 @@ module frequency(signalIn, clock, number, segment);
 
 output [6:0] segment; //seven segment display
 output [7:0] number; //eight big combination for number
-input clock;
+input clock; //clock will show vary display update rate
 input signalIn; //signal
 
 reg[7:0] number= 8'b01;
@@ -29,7 +29,7 @@ always@(posedge clock)
     begin
         if(!gatecounter)
             begin
-                gatecounter = 'd2500;
+                gatecounter = 'd2500; //this number may have to be changed, ideally a timer of 1 sec will be achieved
                 gate = 0;
                 freq = count;
             end
@@ -38,8 +38,8 @@ always@(posedge clock)
                 gate = 1;
             end
 
-        gatecounter = gatecounter - 1'b1;
-        disp_scanner = disp_scanner + 1'b1;
+        gatecounter = gatecounter - 1'b1; //decrement on every clock impulse
+        disp_scanner = disp_scanner + 1'b1; //used as an index to digit
         if(disp_scanner == 'd5000)
             begin
                 number = {number[6:0], number[7]};
