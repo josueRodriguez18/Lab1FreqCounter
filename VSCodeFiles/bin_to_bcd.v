@@ -1,69 +1,69 @@
 `timescale 1ns / 1ps
-module bin_to_bcd(bin,ONES,TENS,HUNDREDS,TH,TENTH,HUNTH,MIL,TENMIL);
+module bin_to_bcd(bin,one,ten,hundred,thousands,ten_thousands,hundred_thousands,millions,ten_millions);
 
 	parameter BIN_N_bits=24;
 
 	input [26:0] bin;
-	output [3:0] ONES, TENS ,HUNDREDS ,TH,TENTH,HUNTH,MIL,TENMIL;
-	reg [3:0] ONES, TENS ,HUNDREDS ,TH,TENTH,HUNTH,MIL,TENMIL,HUNDMIL;
+	output [3:0] one, ten ,hundred ,thousands,ten_thousands,hundred_thousands,millions,ten_millions;
+	reg [3:0] one, ten ,hundred ,thousands,ten_thousands,hundred_thousands,millions,ten_millions,hundred_milli;
 	integer i;
 	always @(bin)
 		begin
-			ONES=0; 
-			TENS=0;	
-			HUNDREDS=0;
-			TH=0;
-			TENTH=0;
-			HUNTH=0;
-			MIL=0; 
-			TENMIL=0;
+			one=0; 
+			ten=0;	
+			hundred=0;
+			thousands=0;
+			ten_thousands=0;
+			hundred_thousands=0;
+			millions=0; 
+			ten_millions=0;
 			for(i=26;i>=0;i=i-1)  //26 bit binary value
 				begin
-					if(HUNDMIL>=5)
-					HUNDMIL =HUNDMIL +3;
-					if(TENMIL>=5)
-					TENMIL = TENMIL +3;
-					if(MIL>=5)
-					MIL=MIL+3;
-					if(HUNTH>=5)
-					HUNTH=HUNTH+3;
-					if(TENTH>=5)
-					TENTH=TENTH+3;
-					if(TH>=5)
-					TH=TH+3;
-					if(HUNDREDS>=5)
-					HUNDREDS=HUNDREDS+3;
-					if(TENS>=5)
-					TENS=TENS+3;
-					if(ONES>=5)
-					ONES =ONES+3;
+					if(hundred_milli>=5)
+					hundred_milli =hundred_milli +3;
+					if(ten_millions>=5)
+					ten_millions = ten_millions +3;
+					if(millions>=5)
+					millions=millions+3;
+					if(hundred_thousands>=5)
+					hundred_thousands=hundred_thousands+3;
+					if(ten_thousands>=5)
+					ten_thousands=ten_thousands+3;
+					if(thousands>=5)
+					thousands=thousands+3;
+					if(hundred>=5)
+					hundred=hundred+3;
+					if(ten>=5)
+					ten=ten+3;
+					if(one>=5)
+					one =one+3;
 					
-					HUNDMIL = HUNDMIL <<1;
-					HUNDMIL[0] =TENMIL[3];
+					hundred_milli = hundred_milli <<1;
+					hundred_milli[0] =ten_millions[3];
 					
-					TENMIL = TENMIL <<1;
-					TENMIL[0] = MIL[3];
+					ten_millions = ten_millions <<1;
+					ten_millions[0] = millions[3];
 					
-					MIL = MIL <<1;
-					MIL[0] = HUNTH[3];
+					millions = millions <<1;
+					millions[0] = hundred_thousands[3];
 					
-					HUNTH = HUNTH <<1;
-					HUNTH[0] = TENTH[3];
+					hundred_thousands = hundred_thousands <<1;
+					hundred_thousands[0] = ten_thousands[3];
 					
-					TENTH = TENTH<<1;
-					TENTH[0] = TH[3];
+					ten_thousands = ten_thousands<<1;
+					ten_thousands[0] = thousands[3];
 					
-					TH= TH <<1;
-					TH[0]= HUNDREDS [3];
+					thousands= thousands <<1;
+					thousands[0]= hundred [3];
 					
-					HUNDREDS = HUNDREDS<<1;
-					HUNDREDS[0] = TENS[3];
+					hundred = hundred<<1;
+					hundred[0] = ten[3];
 					
-					TENS = TENS <<1;
-					TENS[0] = ONES[3];
+					ten = ten <<1;
+					ten[0] = one[3];
 					
-					ONES = ONES <<1;
-					ONES[0] = bin[i];
+					one = one <<1;
+					one[0] = bin[i];
 				end //end of for loop
 	end//end of always
 
