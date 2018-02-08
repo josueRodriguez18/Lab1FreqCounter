@@ -151,11 +151,9 @@ module bcd_to_seg (BCD, seg);
                     seg[5] = 1'b1; //f
                     seg[6] = 1'b1; //g
                 end
-
-
+            
             endcase
 
         end
-
 
 endmodule
