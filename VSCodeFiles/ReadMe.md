@@ -21,5 +21,3 @@ increment on every rising edge seen in signalIn. The frequency module will
 simply be (counter amount/ gate high time) to give a frequency and then
 display that to a seven segment board. Only incrementing on rising edges
 means that duty cycle calculation is not straightforward.
-
-reference: http://www.circuitvalley.com/2015/10/simple-frequency-meter-counter-fpga-xilinx-altera-cpld-wireframe.html

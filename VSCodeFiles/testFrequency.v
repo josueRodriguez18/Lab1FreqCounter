@@ -3,7 +3,7 @@ module testFrequency();
     reg sigin;
     reg clck;
     wire[0:6] segment;
-    wire[0:7] digit;
+    wire[0:7] number;
 
     initial begin
         clck = 1; //initialize clock to 1 (this will be gate input)
@@ -12,7 +12,7 @@ module testFrequency();
     always
         begin
             #10 sigin = ~sigin; //invert signal to create square wave (has period of 50 ms)
-            #1 clck = ~clck; //regulates update rate for ouput of segments and digits
+            #1 clck = ~clck; //regulates update rate for ouput of segments and numbers
         end
-    frequency f1(sigin, clck, digit, segment);
+    frequency f1(sigin, clck, number, segment);
 endmodule
