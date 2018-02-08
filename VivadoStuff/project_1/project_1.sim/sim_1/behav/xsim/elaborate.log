@@ -1,8 +1,0 @@
-Vivado Simulator 2017.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto d7943b433cac48b885ad98705cbe7dcd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testFrequency_behav xil_defaultlib.testFrequency xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-2538] module instantiation should have an instance name [D:/ProjectLab1/FrequencyCounterStuff/VivadoStuff/project_1/project_1.srcs/sources_1/imports/FrequencyCounterStuff/testFrequency.v:16]
-ERROR: [VRFC 10-2063] Module <counter> not found while processing module instance <'Undefined'>
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
